@@ -3,7 +3,7 @@ services:
   vprodb:
     build: 
       context: ./Docker-files/db
-    image: vprofiledb
+    image: ghcr.io/luizpra/vprofiledb
     container_name: vprodb
     ports:
       - "3306:3306"
@@ -31,7 +31,7 @@ services:
   vproapp:
     build: 
       context: ./Docker-files/app
-    image: vprofileapp
+    image: ghcr.io/luizpra/vprofileapp
     container_name: vproapp
     ports:
       - "8080:8080"
@@ -43,7 +43,7 @@ services:
   vproweb:
     build: 
       context: ./Docker-files/web
-    image: vprofileweb
+    image: ghcr.io/luizpra/vprofileweb
     container_name: vproweb
     ports:
       - "80:80"
