@@ -21,6 +21,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'cat settings.xml'
+                sh 'printenv'
                 sh 'mvn -s settings.xml -DskipTests install'
             }
         }
